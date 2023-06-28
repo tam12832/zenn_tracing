@@ -1,0 +1,1028 @@
+
+body {
+  font-family: -apple-system, "system-ui", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Segoe UI Emoji", sans-serif;
+  margin: 0 auto;
+  background-color: #EDF2F7;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  text-decoration: none;
+}
+
+/* スマートフォンおよび共通設定 */
+/* ヘッダー */
+
+header {
+  height: 55px;
+  background-color: #fff;
+  padding-top: 8px;
+}
+
+.header_width {  
+  display: flex;
+  justify-content: space-between;
+  max-width: 1116px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Zenn_Logo p {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 29px;
+  padding: 5px 0 10px 0;
+  color: #676767;
+}
+
+.Zenn_Logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.Zenn_Logo a {
+  display: flex;
+}
+
+.header_right {
+  display: flex;
+}
+
+.header_right img {
+  height: 20px;
+  width: 20px;
+  margin: 12px 18px;
+}
+
+.Login {
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  color: #FDF7E3;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 5px 0;
+  border: 1px solid #B5D0F0;
+  background: #3EA8FF;
+  border-radius: 8px;
+  margin: 4px auto 5px auto;
+}
+
+.Login:hover {
+  background: #407df8;
+  transition: .5s;
+}
+
+/* メイン */
+
+.mobile_nav {
+  background-color: #fff;
+  padding: 5px 20px;
+  border: 1px solid #E5EEF4;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.nav_upper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.mobile_profile a {
+  display: flex;
+}
+
+.mobile_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.mobile_profile p {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  color: #676767;
+}
+
+.profile img {
+  /* スマホw40, h40 */
+  /* PCw60, h60 */
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.table_of_contents01 {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.pulldown_tab label {
+  font-size: 14px;
+  color: #6e7b85;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.pulldown_tab {
+  display: flex;
+  margin-top: 10px;
+}
+
+.pulldown img {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.pulldown {
+  transform: rotate(0deg);
+  transition: .1s;
+}
+
+#label1:checked ~ .pulldown {
+  transform: rotate(180deg);
+  transition: .1s;
+}
+
+.pulldown_contents01 input[type="checkbox"] {
+  display: none;
+}
+
+.favorite {
+  background: #EDF2F7;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.contents01_item {
+  font-size: 14px;
+  background-color: #fff;
+  width: 300px;
+  padding: 20px 20px 10px;
+  border-radius: 15px;
+  margin-left: auto;
+  box-shadow: 6px 6px 6px 6px #D0D8DF;
+  position: absolute;
+  top: 42px;
+  right: 0px;
+  display: none;
+}
+
+.item_paragraph, .item_paragraph2 {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.to_paragraph, .to_paragraph2 {
+  cursor: pointer;
+  border-left: 1px solid #E0EFFF;
+  padding: 0 0 10px 16px;
+  position: relative;
+}
+
+/* ーーーーJS要素(可変activeプロパティ)ーーーー */
+
+.to_paragraph:not(.active):before, .to_paragraph2:not(.active):before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: -3px;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background: silver;
+}
+
+.to_paragraph.active, .to_paragraph2.active {
+  font-weight: bold;
+}
+
+.to_paragraph.active:before, .to_paragraph2.active:before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: -5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #3DA8FF;
+}
+/* ----------------ここまで---------------- */
+
+#label1:checked ~ .contents01_item {
+  display: block;
+}
+
+.page_top {
+  display: flex;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.page_top img {
+  width: 13px;
+  height: 13px;
+  margin: 3px 5px 0 0;
+}
+
+.introduction02 {
+  display: none;
+}
+
+.introduction02 .zenn_offical {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.profile {
+  display: none;
+}
+
+.headline {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline img {
+  width: 60px;
+  height: 75px;
+  margin: 60px 0 20px 0;
+}
+
+.headline h3 {
+  color: #303132;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.headline p {
+  color: #6E7B85;
+  font-size: 15px;
+  margin-bottom: 48px;
+}
+
+.max_width_favorite {
+  display: none;
+}
+
+.main_contents {
+  background-color: #fff;
+}
+
+.main_border {
+  margin: 0 20px;
+}
+
+.category_tag {
+  display: flex;
+}
+
+.category_tag img {
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+}
+
+.category_tag .Zenn_Logo, .Tech {
+  border: 1px solid #E5EEF4;
+  border-radius: 25px;
+  margin: 30px 5px 20px 5px;
+  /* padding: 5px; */
+}
+
+.category_tag .Zenn_Logo :hover, .Tech :hover {
+  background: #EDF2F7;
+  transition: .3s;
+  border-radius: 25px;
+}
+
+.category_tag .Zenn_Logo p {
+  padding: 0 10px 0 0;
+}
+
+.category_tag p {
+  padding: 6px 10px 6px 5px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #676767;
+}
+
+.category_tag a {
+  display: flex;
+  padding: 2px 0 0 3px;
+}
+
+.top_sentence {
+  margin-bottom: 75px;
+}
+
+.paragraph {
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #EDF2F7;
+  margin-bottom: 20px;
+}
+
+.paragraph_0 p {
+  margin-bottom: 75px;
+}
+
+.paragraph_1 {
+  margin-bottom: 60px;
+}
+
+.paragraph_1 img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* ポップアッププロパティ 　　　　　　*/
+.open {
+  cursor: zoom-in;
+}
+
+.editor_checkbox {
+  display: none;
+}
+
+.overlay {
+  transform: scale(0);
+}
+
+.editor_checkbox:checked + .overlay {
+  display: block;
+	z-index: 3;
+	background-color: rgba(251, 252, 253, 0.9);
+  backdrop-filter: blur(2px);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  transition: .2s;
+  transform: scale(1);
+}
+
+.window {
+  background-color: #fff;
+	width: 90vw;
+	max-width: 100%;
+	border-radius: 6px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.close {
+  cursor: zoom-out;
+}
+/* ーーーー　　ここまで　　ーーーーー */
+
+.paragraph_1 p {
+  margin-bottom: 15px;
+}
+
+.Circled_button {
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border: 1px solid #EDF2F7;
+}
+
+.Circled_article {
+  display: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.pulldown_contents02 input[type="checkbox"] {
+  display: none;
+}
+
+.pulldown_contents02 input:checked+label {
+  background-color: #F0F5F9;
+  border-radius: 10px 10px 0 0;
+}
+
+#label2:checked ~ .Circled_article {
+  display: block;
+  border: 1px solid #E1EBF2;
+  line-height: 26px;
+  padding: 20px;
+}
+
+.Circled_article ul {
+  padding-left: 25px;
+}
+
+.Circled_article li {
+  margin: 8px 0;
+}
+
+.Circled_article span {
+  font-size: 13px;
+  font-family: Menlo;
+  background-color: #F2F5F8;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Circled_button a {
+  display: inline-block;
+  color: #545454;
+  margin-left: 5px;
+}
+
+.Circled_button img {
+  width: 22px;
+  height: 22px;
+}
+
+.paragraph_2 img {
+  width: 100%;
+}
+
+.paragraph_2 .editor {
+  margin-bottom: 25px;
+}
+
+.paragraph_2 p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.paragraph_3 a {
+  color: #1183FD;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.paragraph_3 a:hover {
+  text-decoration: underline;
+}
+
+.paragraph_3 p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.border_sentence {
+  border-top: 2px solid #E5EEF4;
+  padding-top: 30px;
+}
+
+.paragraph_4 .Circled_button {
+  font-size: 14px;
+  display: flex;
+  width: 164px;
+  height: 16px; 
+  padding: 12px;
+  margin-bottom: 40px;
+}
+
+.paragraph_4 .Circled_button:hover {
+  background: #F5FBFF;
+  transition: .3s;
+}
+
+.paragraph_4 .paragraph_4flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.paragraph_4 .fav_count {
+  display: flex;
+  border-radius: 25px;
+}
+
+.paragraph_4 .fav_count img {
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.paragraph_4 .fav_count p {
+  color: #93a5b1;
+  font-weight: normal;
+  font-size: 12px;
+  margin: 16px 0 0 12px;
+}
+
+.paragraph_4flex .pulldown {
+  position: relative;
+}
+
+.pulldown .Circled_button {
+  display: none;
+  position: absolute;
+  right: -1px;
+}
+
+.pulldown input[type="checkbox"] {
+  display: none;
+}
+
+#label3:checked ~ .Circled_button {
+  display: flex;
+  animation-name:fadeUpAnime;
+  animation-duration:0.2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+.introduction01 {
+  border-top: 1px solid #E5EEF4;
+  padding: 30px 0;
+  display: flex;
+}
+
+.introduction01 .zenn_offical {
+  margin-top: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.zenn_account {
+  margin-left: 25px;
+}
+
+.zenn_account a {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #000;
+}
+
+.zenn_account p {
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.SNS {
+  display: flex;
+}
+
+.SNS .follow {
+  border: 1px solid #6E7B85;
+  border-radius: 25px;
+  padding: 4px 15px 2px 15px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.SNS .follow:hover {
+  background: #EDF2F7;
+  transition: .5s;
+}
+
+.SNS img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 5px 0 0 18px;
+}
+
+
+.table_of_contents02 {
+  display: none;
+}
+
+.discussion {
+  background-color: #fff;
+  text-align: center;
+  border-top: 2px solid #EDF2F7;
+  padding-bottom: 20px;
+}
+
+.discussion h3 {
+  color: #343434;
+  font-size: 22px;
+  line-height: 34px;
+  padding-top: 35px;
+  margin-bottom: 15px;
+}
+
+.discussion img {
+  width: 305px;
+  background-color: #fff;
+  padding-bottom: 42px;
+}
+
+.discussion p {
+  color: #93a5b1;
+  font-size: 15px;
+  padding: 20px 0 10px;
+  border-top: 1px solid #E5EEF4;
+}
+.discussion .Login {
+  display: block;
+  font-weight: bold;
+  padding: 10px 8px 5px;
+}
+
+.other_article {
+  margin: 0 20px;
+}
+
+.other_article h4 {
+  font-size: 27px;
+  line-height: 49px;
+  margin: 50px 0 30px 0;
+}
+
+.advertisement {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.advertisement img {
+  width: 35px;
+  height: 35px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.user_articles {
+  margin-left: 20px;
+}
+
+.user_articles h5 {
+  font-size: 17px;
+}
+
+.zenn_users {
+  display: flex;
+  margin-top: 10px;
+}
+
+.zenn_users img {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin-right: 10px;
+}
+
+.zenn_users img:last-of-type {
+  width: 15px;
+  height: 15px;
+  background-color: #EDF2F7;
+  margin: 0;
+}
+
+.zenn_users a {
+  margin-right: 5px;
+  font-size: 13px;
+  color: #000;
+}
+
+.zenn_users a:hover {
+  text-decoration: underline
+}
+
+.zenn_users p {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+
+/* フッター */
+
+footer {
+  background-color: #fff;
+}
+
+.footer_width {
+  max-width: 1116px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.footer_Zenn {
+  padding: 35px 0;
+}
+
+.Zenn_subtitle {
+  font-size: 13px;
+  line-height: 21px;
+  color: #93a5b1;
+}
+
+.Zenn_links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #E5EEF4;
+  padding-bottom: 10px;
+}
+
+.Zenn_links p {
+  font-family: inter;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.Zenn_links a {
+  font-size: 14px;
+  color: #5f5f5f;
+  display: block;
+}
+
+.Zenn_links a:hover {
+  text-decoration: underline;
+}
+
+.Zenn_links a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.Zenn_links a:last-child {
+  margin-bottom: 30px;
+}
+
+.classmethod {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+/* スマートフォンおよび共通設定ここまで */
+/* スマホ2段階目設定 */
+@media screen and (min-width: 560px) {
+  
+  /* 両サイドにスペースができる */
+  
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header_right .Login {
+    padding: 10px 5px 0;
+    width: 70px;
+    height: 30px;
+    transition: .5s;
+  }
+  
+  .mobile_nav {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .sprit_responsive {
+    padding: 0 30px;
+  }
+
+  .main_contents {
+    border-radius: 15px;
+  }
+  
+  .introduction01 {
+    padding: 40px 0;
+  }
+  
+  .introduction01 {
+    margin-bottom: 40px;
+  }
+  
+  .introduction01 .zenn_offical {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    transition: .5s;
+  }
+  
+  .discussion {
+    border-radius: 15px;
+  }
+  
+  .advertisement > img {
+  width: 45px;
+  height: 45px;
+  transition: .5s;
+  }
+
+  footer {
+    padding: 0 30px;
+  }
+}
+
+/* スマホ3段階目設定 */
+@media screen and (min-width: 750px) {
+  
+  /* Read nextが２列になる */
+  /* フッターリンクが1行４列になる */
+  
+  .headline h3 {
+    font-size: 31px;
+  }
+
+  .readnext {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+  }
+  
+  .Zenn_links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #E5EEF4;
+    padding-bottom: 10px;
+  }
+
+  .Zenn_links p {
+    margin-bottom: 20px;
+  }
+  
+  .Zenn_links a:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+}
+
+/*タブレットサイズの設定*/
+@media screen and (min-width: 974px) {
+  
+  /* サイドバーが出現 */
+
+  .mobile_nav {
+    display: none;
+  }
+
+  .contents01_item {
+    display: none;
+  }
+  
+  .sprit_responsive {
+    max-width: 1116px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+  }
+
+  .headline h3 {
+    margin-bottom: 70px;
+  }
+  
+  .headline p {
+    display: none;
+  }
+
+  .profile, .introduction02, .table_of_contents02 {
+    display: block;
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .profile .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .profile .item:not(:last-child) {
+    border-bottom: 1px solid #E5EEF4;
+  }
+
+  .item_left {
+    display: flex;
+  }
+
+  .item_left img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  .item a, p {
+    font-size: 14px;
+  }
+   
+  .item_right {
+    display: flex;
+  }
+
+  .item_right img {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .item_right > p {
+    color: #000;
+  }
+
+  .item_right > p:hover {
+    text-decoration: underline;
+  }
+  
+  .scroll_contents {
+    position: sticky;
+    top: 30px;
+  }
+
+  .introduction02 {
+    padding: 20px;
+  }
+
+  .sprit_contents {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .introduction02 .SNS {
+    margin-top: 5px;
+  }
+
+  .introduction02 .SNS img {
+    margin-left: 10px;
+  }
+
+  .other_article {
+    margin: 0 auto;
+    max-width: 1116px;
+  }
+
+  .footer_responsive {
+    display: flex;
+    padding-top: 45px;
+  }
+
+  .footer_Zenn {
+    width: 200px;
+    padding: 0;
+    margin: 0 70px 0 0;
+  }
+  
+  .Zenn_subtitle span {
+    display: block;
+    margin-left: 8px;
+  }
+  
+  .Zenn_links {
+    width: 100%;
+  }
+  
+}
+/*PCサイズの設定*/
+@media screen and (min-width: 1282px) {
+  
+  /* ファボ件数がページ左に出現 */
+  
+  .sprit_responsive {
+    grid-template-columns: 50px 790px 300px;
+  }
+  
+  .max_width_favorite {
+    display: block;
+    position: sticky;
+    top: 90px;
+  }
+
+  .max_width_favorite img {
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 30px;
+  }
+
+  .max_width_favorite p {
+    color: #A9B7C2;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  
+  
+}
