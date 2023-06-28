@@ -270,7 +270,7 @@ header {
   margin-bottom: 48px;
 }
 
-.max_width_favorite {
+.scroll_contents01 {
   display: none;
 }
 
@@ -296,7 +296,6 @@ header {
   border: 1px solid #E5EEF4;
   border-radius: 25px;
   margin: 30px 5px 20px 5px;
-  /* padding: 5px; */
 }
 
 .category_tag .Zenn_Logo :hover, .Tech :hover {
@@ -947,7 +946,7 @@ footer {
     text-decoration: underline;
   }
   
-  .scroll_contents {
+  .scroll_contents02 {
     position: sticky;
     top: 30px;
   }
@@ -1004,6 +1003,10 @@ footer {
     grid-template-columns: 50px 790px 300px;
   }
   
+  .scroll_contents01 {
+    display: block;
+  }
+
   .max_width_favorite {
     display: block;
     position: sticky;
