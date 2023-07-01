@@ -647,7 +647,7 @@ header {
 }
 
 .other_article {
-  margin: 0 20px;
+  margin: 0 20px 80px 20px;
 }
 
 .other_article h4 {
@@ -662,8 +662,8 @@ header {
 }
 
 .advertisement img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   padding: 25px;
   background-color: #fff;
   border-radius: 15px;
@@ -824,8 +824,8 @@ footer {
   }
   
   .advertisement > img {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   transition: .5s;
   }
 
@@ -844,10 +844,14 @@ footer {
     font-size: 31px;
   }
 
+  .other_article {
+    margin: 0 30px 60px 30px;
+  }
+
   .readnext {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 50px;
+    column-gap: 40px;
   }
   
   .Zenn_links {
@@ -969,8 +973,8 @@ footer {
   }
 
   .other_article {
-    margin: 0 auto;
-    max-width: 1116px;
+    margin: 0 auto 40px auto;
+    max-width: 870px;
   }
 
   .footer_responsive {
